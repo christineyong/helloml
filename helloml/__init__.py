@@ -134,7 +134,7 @@ class HelloModel():
     names = ['Logistic Regression', 'Decision Tree', 'K-Nearest Neighbours']
     obj_dict = dict(zip(names, [
         LogisticRegression(),
-        DecisionTreeClassifier(),
+        DecisionTreeClassifier(max_depth=3),
         KNeighborsClassifier(),
     ]))
     req_dict = dict(zip(names, [
