@@ -7,6 +7,7 @@ from sklearn.preprocessing import RobustScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import f1_score
 
 
 class HelloDataset():
@@ -169,8 +170,11 @@ class HelloModel():
         print('Done.')
 
     def test(self, hellodata):
-        score = self.model.score(hellodata.X, hellodata.Y)
-        print(f'Accuracy: {round(score*100, 1)}% of your predictions were correct.')
+        '''
+        Get model's F1 score on given dataset.
+        '''
+        score = f1_score(hellodata.Y, self.model.predict(hellodata.X), average='micro')
+        print(f'F1 Score of your {self.name} model: {score}.')
 
     def set_neighbours(self, n_neighbours):
         '''
