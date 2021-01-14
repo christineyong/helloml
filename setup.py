@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="helloml-sideqst",  # Replace with your own username
-    version="0.0.1",
+    version="0.0.3",
     author="Christine Yong",
     author_email="ycwchristine@gmail.com",
     description="Machine Learning, simplified.",

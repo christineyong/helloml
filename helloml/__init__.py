@@ -87,7 +87,7 @@ class HelloDataset():
         '''
         self.df[new_feat] = self.df[feat_a] - self.df[feat_b]
         print(
-            f'Created new feature "{new_feat}" by dividing {feat_num} by {feat_denom}.')
+            f'Created new feature "{new_feat}" by subtracting {feat_a} from {feat_b}.')
 
     def divide_feature(self, new_feat, feat_num, feat_denom):
         '''
